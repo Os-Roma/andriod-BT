@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:padding="5dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/btnDesconectar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#F7F7F7"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintStart_toEndOf="@+id/tvtDia"
+        app:layout_constraintTop_toTopOf="@+id/tvtDia"
+        app:srcCompat="@drawable/ic_baseline_power_settings_new_24" />
+
+    <ImageButton
+        android:id="@+id/subirEncendido"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="#F7F7F7"
+        app:layout_constraintBottom_toTopOf="@+id/tvtEncendido"
+        app:layout_constraintEnd_toEndOf="@+id/bajarEncendido"
+        app:layout_constraintStart_toStartOf="@+id/bajarEncendido"
+        app:layout_constraintTop_toBottomOf="@+id/tvtTierra"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_arrow_up" />
+
+    <ImageButton
+        android:id="@+id/subirApagado"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="#F7F7F7"
+        app:layout_constraintBottom_toTopOf="@+id/tvtApagado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvtApagado"
+        app:layout_constraintTop_toBottomOf="@+id/tvtHumedad"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_arrow_up" />
+
+    <ImageButton
+        android:id="@+id/bajarEncendido"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="#F7F7F7"
+        app:layout_constraintEnd_toStartOf="@+id/bajarApagado"
+        app:layout_constraintTop_toBottomOf="@+id/tvtEncendido"
+        app:srcCompat="@drawable/ic_arrow_down" />
+
+    <ImageButton
+        android:id="@+id/bajarApagado"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="#F7F7F7"
+        app:layout_constraintBottom_toBottomOf="@+id/bajarEncendido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvtApagado"
+        app:layout_constraintTop_toBottomOf="@+id/tvtApagado"
+        app:srcCompat="@drawable/ic_arrow_down" />
+
+    <ImageButton
+        android:id="@+id/subirMinutos"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="#F7F7F7"
+        app:layout_constraintEnd_toEndOf="@+id/bajarEncendido"
+        app:layout_constraintStart_toStartOf="@+id/bajarEncendido"
+        app:layout_constraintTop_toBottomOf="@+id/bajarApagado"
+        app:srcCompat="@drawable/ic_arrow_up" />
+
+    <ImageButton
+        android:id="@+id/subirMinimo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="#F7F7F7"
+        app:layout_constraintEnd_toEndOf="@+id/bajarMinutos"
+        app:layout_constraintStart_toStartOf="@+id/bajarMinutos"
+        app:layout_constraintTop_toBottomOf="@+id/bajarMinutos"
+        app:srcCompat="@drawable/ic_arrow_up" />
+
+    <ImageButton
+        android:id="@+id/bajarMinutos"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#F7F7F7"
+        app:layout_constraintEnd_toEndOf="@+id/subirMinutos"
+        app:layout_constraintStart_toStartOf="@+id/subirMinutos"
+        app:layout_constraintTop_toBottomOf="@+id/tvtMinutos"
+        app:srcCompat="@drawable/ic_arrow_down" />
+
+    <ImageButton
+        android:id="@+id/bajarMinimo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#F7F7F7"
+        app:layout_constraintBottom_toBottomOf="@+id/bajarMaximo"
+        app:layout_constraintEnd_toEndOf="@+id/tvtMinimo"
+        app:layout_constraintStart_toStartOf="@+id/tvtMinimo"
+        app:layout_constraintTop_toBottomOf="@+id/tvtMinimo"
+        app:srcCompat="@drawable/ic_arrow_down" />
+
+    <ImageButton
+        android:id="@+id/subirMaximo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="#F7F7F7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvtMaximo"
+        app:layout_constraintTop_toBottomOf="@+id/bajarMinutos"
+        app:srcCompat="@drawable/ic_arrow_up" />
+
+    <ImageButton
+        android:id="@+id/bajarMaximo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="#F7F7F7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvtMaximo"
+        app:layout_constraintTop_toBottomOf="@+id/tvtMaximo"
+        app:srcCompat="@drawable/ic_arrow_down" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="35dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:background="#F7F7F7"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ajustesLuces"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ajustesLuces"
+        app:srcCompat="@drawable/ic_luz" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="35dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:background="#F7F7F7"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        app:srcCompat="@drawable/ic_viento" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="35dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:background="#F7F7F7"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView10"
+        app:srcCompat="@drawable/ic_riego" />
+
+    <TextView
+        android:id="@+id/tvtTemperatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/strtemperatura"
+        android:textAlignment="center"
+        android:textColor="#F44336"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtHora" />
+
+    <TextView
+        android:id="@+id/tvtHumedad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/strhumedad"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtHora" />
+
+    <TextView
+        android:id="@+id/tvtTierra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/strtierra"
+        android:textAlignment="center"
+        android:textColor="#4CAF50"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvtHumedad"
+        app:layout_constraintStart_toEndOf="@+id/tvtTemperatura"
+        app:layout_constraintTop_toBottomOf="@+id/tvtHora" />
+
+    <TextView
+        android:id="@+id/tvtHora"
+        android:layout_width="423dp"
+        android:layout_height="75dp"
+        android:text="@string/strhora"
+        android:textAlignment="center"
+        android:textColor="#444444"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtDia" />
+
+    <TextView
+        android:id="@+id/tvtDia"
+        android:layout_width="137dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="4dp"
+        android:padding="5dp"
+        android:text="@string/strdia"
+        android:textAlignment="center"
+        android:textColor="#9E9090"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ajustesLuces"
+        android:layout_width="111dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="45dp"
+        android:text="@string/strajustesluces"
+        android:textColor="#444444"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/tvtTierra" />
+
+    <TextView
+        android:id="@+id/tvtApagado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/strajustesluzapagado"
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvtEncendido" />
+
+    <TextView
+        android:id="@+id/tvtEncendido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/strajustesluzencendido"
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/bajarEncendido"
+        app:layout_constraintStart_toStartOf="@+id/bajarEncendido"
+        app:layout_constraintTop_toTopOf="@+id/ajustesLuces" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/srta"
+        android:textColor="#444444"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvtEncendido"
+        app:layout_constraintEnd_toStartOf="@+id/tvtApagado"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toEndOf="@+id/tvtEncendido"
+        app:layout_constraintTop_toTopOf="@+id/tvtEncendido"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="@string/srtde"
+        android:textColor="#444444"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ajustesLuces"
+        app:layout_constraintEnd_toStartOf="@+id/tvtEncendido"
+        app:layout_constraintTop_toBottomOf="@+id/subirEncendido"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvtMinutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/strajustesluzencendido"
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/bajarMinutos"
+        app:layout_constraintStart_toStartOf="@+id/subirMinutos"
+        app:layout_constraintTop_toBottomOf="@+id/subirMinutos" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/strajusteminutos"
+        android:textColor="#444444"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvtMinutos"
+        app:layout_constraintTop_toBottomOf="@+id/subirMinutos" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="167dp"
+        android:layout_height="25dp"
+        android:text="@string/strajustesvent"
+        android:textColor="#444444"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/bajarMinutos"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/subirMinutos"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="109dp"
+        android:layout_height="23dp"
+        android:text="@string/strajustesriego"
+        android:textColor="#444444"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/bajarMinimo"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/subirMinimo" />
+
+    <TextView
+        android:id="@+id/tvtMinimo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/strhummin"
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/bajarMaximo"
+        app:layout_constraintEnd_toEndOf="@+id/subirMinimo"
+        app:layout_constraintStart_toStartOf="@+id/subirMinimo"
+        app:layout_constraintTop_toBottomOf="@+id/subirMinimo" />
+
+    <TextView
+        android:id="@+id/tvtMaximo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/strhummax"
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subirMaximo" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="15dp"
+        android:layout_height="23dp"
+        android:text="@string/straporcriego"
+        android:textColor="#444444"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toStartOf="@+id/tvtMinimo"
+        app:layout_constraintTop_toBottomOf="@+id/subirMinimo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/srt_"
+        android:textColor="#444444"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/bajarMinimo"
+        app:layout_constraintStart_toEndOf="@+id/tvtMinimo"
+        app:layout_constraintTop_toBottomOf="@+id/subirMinimo" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="15dp"
+        android:layout_height="24dp"
+        android:text="@string/straporcriego"
+        android:textColor="#444444"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        app:layout_constraintEnd_toStartOf="@+id/tvtMaximo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/subirMaximo"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/guardarDatos"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#F7F7F7"
+        app:layout_constraintEnd_toStartOf="@+id/tvtDia"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvtDia"
+        app:srcCompat="@drawable/ic_baseline_save_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

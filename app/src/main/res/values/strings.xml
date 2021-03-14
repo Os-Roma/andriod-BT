@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Samy</string>
+    <string name="strDispV">DISPOSITIVOS VINCULADOS</string>
+    <string name="strdia">-- / -- / ----</string>
+    <string name="strhora">--:--</string>
+    <string name="strtemperatura">T --ºC</string>
+    <string name="strhumedad">H --%</string>
+    <string name="strtierra">H suelo: --%</string>
+    <string name="strajustesluces">Horas de luz:</string>
+    <string name="strajustesluzencendido">--</string>
+    <string name="srta">a</string>
+    <string name="srt_">-</string>
+    <string name="srtde"> de </string>
+    <string name="strajustesluzapagado">--</string>
+    <string name="strajustesventilacion">--</string>
+    <string name="strajusteminutos">Min.</string>
+    <string name="strajustesvent">Ventilación x hora:</string>
+    <string name="strhummin">--</string>
+    <string name="strhummax">--</string>
+    <string name="strajustesriego">Regar desde:</string>
+    <string name="straporcriego">%</string>
+</resources>
